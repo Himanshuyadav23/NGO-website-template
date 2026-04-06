@@ -70,6 +70,34 @@ a:hover {
   margin-inline: auto;
 }
 
+/* DComm agency watermark — delete .site-watermark from HTML when client pays */
+.site-watermark {
+  position: fixed;
+  inset: 0;
+  z-index: 85;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.site-watermark img {
+  width: min(75vw, 520px);
+  max-height: min(55vh, 420px);
+  height: auto;
+  object-fit: contain;
+  opacity: 0.13;
+  transform: rotate(-12deg);
+  user-select: none;
+}
+@media (max-width: 768px) {
+  .site-watermark img {
+    width: min(88vw, 380px);
+    opacity: 0.1;
+  }
+}
+
 /* Header */
 .site-header {
   position: fixed;
